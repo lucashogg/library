@@ -9,7 +9,7 @@ class Book {
         this.read = false;
     }
 }
-// Add books to library function
+// Add book to library function
 function addBookToLibrary () {
     const title = document.querySelector('#title');
     const author = document.querySelector('#author');
@@ -22,6 +22,10 @@ function addBookToLibrary () {
     };
 
     myLibrary.push(newBook);
+
+    // Reset form
+    const addBookForm = document.querySelector('.add-book-form');
+    addBookForm.reset();
 }
 // Listen for book submit
 const addBookBtn = document.querySelector('#add-book-button');
