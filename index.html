@@ -9,6 +9,37 @@
 </head>
 
 <body>
+    <form action="" class="add-book-form">
+        <h2>Add Book</h2>
+        <div class="form-row">
+            <label for="title">Title<strong><span aria-label="required">*</span></strong></label>
+            <input type="text" id="title" name="title" placeholder="The Hobbit" required>
+        </div>
+        <div class="form-row">
+            <label for="author">Author<strong><span aria-label="required">*</span></strong></label>
+            <input type="text" id="author" name="author" placeholder="J.R.R. Tolkien" required>
+        </div>
+        <div class="form-row">
+            <label for="pages">Pages<strong><span aria-label="required">*</span></strong></label>
+            <input type="number" id="pages" name="pages" placeholder="310" required>
+        </div>
+        <div class="form-row">
+            <label for="read">Have you read?</label>
+            <input type="checkbox" id="read" name="read">
+        </div>
+        <div class="form-row">
+            <button type="submit">Add</button>
+        </div>
+    </form>
+    <div class="library-grid">
+        <div class="book-card">
+            <div class="title"></div>
+            <div class="author"></div>
+            <div class="pages"></div>
+            <div class="read-status"></div>
+            <div class="remove-book"></div>
+        </div>
+    </div>
 </body>
 
 </html>
