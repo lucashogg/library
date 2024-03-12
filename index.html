@@ -9,29 +9,38 @@
 </head>
 
 <body>
-    <form action="" class="add-book-form">
-        <h2>Add Book</h2>
-        <div class="form-row">
-            <label for="title">Title<strong><span aria-label="required">*</span></strong></label>
-            <input type="text" id="title" name="title" placeholder="The Hobbit" required>
+    <header>
+        <h1>Lucas' Library</h1>
+        <div class="open-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>plus-circle</title><path d="M17,13H13V17H11V13H7V11H11V7H13V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>
         </div>
-        <div class="form-row">
-            <label for="author">Author<strong><span aria-label="required">*</span></strong></label>
-            <input type="text" id="author" name="author" placeholder="J.R.R. Tolkien" required>
-        </div>
-        <div class="form-row">
-            <label for="pages">Pages<strong><span aria-label="required">*</span></strong></label>
-            <input type="number" id="pages" name="pages" placeholder="310" required>
-        </div>
-        <div class="form-row">
-            <label for="read">Have you read?</label>
-            <input type="checkbox" id="read" name="read" value="false">
-        </div>
-        <div class="form-row">
-            <button type="submit" id="add-book-button">Add</button>
-        </div>
-    </form>
-    <div class="library-grid"></div>
+    </header>
+    <main>
+        <form action="" class="add-book-form">
+            <h2>Add Book</h2>
+            <div class="form-row">
+                <label for="title">Title<strong><span aria-label="required">*</span></strong></label>
+                <input type="text" id="title" name="title" placeholder="The Hobbit" required>
+            </div>
+            <div class="form-row">
+                <label for="author">Author<strong><span aria-label="required">*</span></strong></label>
+                <input type="text" id="author" name="author" placeholder="J.R.R. Tolkien" required>
+            </div>
+            <div class="form-row">
+                <label for="pages">Pages<strong><span aria-label="required">*</span></strong></label>
+                <input type="number" id="pages" name="pages" placeholder="310" required>
+            </div>
+            <div class="form-row">
+                <label for="read">Have you read?</label>
+                <input type="checkbox" id="read" name="read" value="false">
+            </div>
+            <div class="form-row">
+                <button type="submit" id="add-book-button">Add</button>
+            </div>
+        </form>
+        <div class="library-grid"></div>
+    </main>
+    <footer></footer>
 </body>
 
 </html>
