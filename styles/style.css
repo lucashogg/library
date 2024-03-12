@@ -1,1 +1,36 @@
 @import './reset.css';
+
+/**** GENERAL ****/
+body {
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    font-weight: normal;
+}
+
+/**** HEADER ****/
+.header-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+
+.header-items h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.header-items svg {
+    width: 100%;
+    max-width: 2rem;
+}
+
+/**** MAIN ****/
+
+/* Modal */
+.add-book-modal::backdrop {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.add-book-modal {
+    margin-top: 4rem;
+}
