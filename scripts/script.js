@@ -1,3 +1,16 @@
+// Modal Popup
+const addBookModal = document.querySelector('.add-book-modal');
+const openModalBtn = document.querySelector('.open-modal');
+const closeModalBtn = document.querySelector('.close-modal');
+
+openModalBtn.addEventListener('click', () => {
+    addBookModal.showModal();
+});
+
+closeModalBtn.addEventListener('click', () => {
+    addBookModal.close();
+});
+
 // Check if form requirements met
 function formReq() {
     const formInputs = document.querySelectorAll('.add-book-form input');
@@ -107,5 +120,6 @@ addBookBtn.addEventListener('click', (e) => {
     e.preventDefault();
     if (formReq()) {
         addBookToLibrary();
+        addBookModal.close()
     }
 });

@@ -24,17 +24,35 @@ body {
     max-width: 2rem;
 }
 
+.header-items svg:hover {
+    cursor: pointer;
+}
+
 /**** MAIN ****/
 
 /* Modal */
 .add-book-modal::backdrop {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .3);
 }
 
 .add-book-modal {
     margin-top: 4rem;
     border-radius: 10px;
 }
+
+.close-modal {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-modal svg {
+    width: 100%;
+    max-width: 1.5rem;
+}
+
+.close-modal svg:hover {
+    cursor: pointer;
+} 
 
 /* Add Book Form */
 .add-book-form {
