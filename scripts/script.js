@@ -28,7 +28,7 @@ function formReq() {
 }
 
 // Array of books
-const myLibrary = [];
+const myLibrary = [{title: 'The Hobbit', author: 'J.R.R. Tolkien', pages: 310, read: true }];
 
 // General book constructor
 class Book {
@@ -76,30 +76,44 @@ function addBookCard() {
         const bookCard = document.createElement('div');
         const readBtn = document.createElement('div');
         const removeBtn = document.createElement('div');
+        const buttonDiv = document.createElement('div');
 
         bookCard.classList.add('book-card');
         readBtn.classList.add('read-status');
         removeBtn.classList.add('remove-book');
 
-        removeBtn.innerHTML = '<button>Remove</button>';
+        removeBtn.innerHTML = `
+            <div class="book-card-item">
+                <button>Remove</button>
+            </div>
+        `;
         readBtn.innerHTML = `
-             <div class="read-status">
+            <div class="book-card-item read-status">
                 <button>${book.read ? "Read" : "Not Read"}</button>
             </div>
         `;
 
         bookCard.innerHTML = `
-            <h3>Title</h3>
-            <p>${book.title}</p>
-            <h3>Author</h3>
-            <p>${book.author}</p>
-            <h3>Pages</h3>
-            <p>${book.pages}</p>
+            <div>
+                <div class="book-card-item">
+                    <h3>Title</h3>
+                    <p>${book.title}</p>
+                </div>
+                <div class="book-card-item">
+                    <h3>Author</h3>
+                    <p>${book.author}</p>
+                </div>
+                <div class="book-card-item">
+                    <h3>Pages</h3>
+                    <p>${book.pages}</p>
+                </div>
+            </div>
         `;
 
         libraryGrid.appendChild(bookCard);
-        bookCard.appendChild(readBtn);
-        bookCard.appendChild(removeBtn);
+        bookCard.appendChild(buttonDiv);
+        buttonDiv.appendChild(readBtn);
+        buttonDiv.appendChild(removeBtn);
 
         readBtn.addEventListener('click', () => {
             myLibrary[i].toggleRead();

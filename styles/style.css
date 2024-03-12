@@ -7,11 +7,15 @@ body {
 }
 
 /**** HEADER ****/
+header {
+    border-bottom: 1px solid;
+}
+
 .header-items {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem;
+    padding: 1rem .5rem;
 }
 
 .header-items h1 {
@@ -117,5 +121,52 @@ body {
 }
 
 .form-row button:active {
+    background-color: blue;
+}
+
+/* Library Grid */
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 1rem;
+    padding: 0 .5rem;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 1rem 0;
+    padding: .5rem;
+}
+
+.book-card-item {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.book-card h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.book-card button {
+    font-size: 1rem;
+    padding: .5rem 2rem;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.book-card button:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.book-card button:active {
     background-color: blue;
 }
