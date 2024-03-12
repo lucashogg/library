@@ -33,4 +33,71 @@ body {
 
 .add-book-modal {
     margin-top: 4rem;
+    border-radius: 10px;
+}
+
+/* Add Book Form */
+.add-book-form {
+    width: 20rem;
+}
+
+.add-book-form h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-row {
+    margin-top: 1rem;
+}
+
+.form-row label:not(label[for="read"]) {
+    display: block;
+    margin-bottom: .25rem;
+    font-weight: bold;
+}
+
+.form-row input:not(input[type="checkbox"]) {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid;
+    padding: .5rem 0;
+}
+
+.form-row input:not(input[type="checkbox"]):focus {
+    outline: none;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 2px 0 0 black;
+    transition: .25s;
+}
+
+.form-row.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.form-checkbox label {
+    font-size: .9rem;
+}
+
+.form-row:has(button) {
+    text-align: center;
+}
+
+.form-row button {
+    font-size: 1rem;
+    padding: .5rem 2rem;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.form-row button:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.form-row button:active {
+    background-color: blue;
 }
