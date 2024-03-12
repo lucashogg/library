@@ -1,14 +1,16 @@
 @import './reset.css';
+@import './colors.css';
 
 /**** GENERAL ****/
 body {
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     font-weight: normal;
+    background-color: var(--main-bg-color);
 }
 
 /**** HEADER ****/
 header {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .header-items {
@@ -21,14 +23,17 @@ header {
 .header-items h1 {
     font-size: 1.8rem;
     font-weight: 900;
+    color: var(--dark-text);
 }
 
 .header-items svg {
     width: 100%;
     max-width: 2rem;
+    fill: var(--dark-text);
 }
 
 .header-items svg:hover {
+    fill: var(--border-color);
     cursor: pointer;
 }
 
@@ -36,12 +41,13 @@ header {
 
 /* Modal */
 .add-book-modal::backdrop {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .7);
 }
 
 .add-book-modal {
     margin-top: 4rem;
     border-radius: 10px;
+    border: 1px solid var(--border-color);
 }
 
 .close-modal {
@@ -52,9 +58,11 @@ header {
 .close-modal svg {
     width: 100%;
     max-width: 1.5rem;
+    fill: var(--dark-text);
 }
 
 .close-modal svg:hover {
+    fill: var(--border-color);
     cursor: pointer;
 } 
 
@@ -67,6 +75,7 @@ header {
     font-size: 1.3rem;
     font-weight: bold;
     text-align: center;
+    color: var(--dark-text);
 }
 
 .form-row {
@@ -77,13 +86,19 @@ header {
     display: block;
     margin-bottom: .25rem;
     font-weight: bold;
+    color: var(--dark-text);
 }
+
 
 .form-row input:not(input[type="checkbox"]) {
     width: 100%;
     border: none;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid var(--border-color);
     padding: .5rem 0;
+}
+
+.form-row input:not(input[type="checkbox"])::placeholder {
+    color: var(--light-text);
 }
 
 .form-row input:not(input[type="checkbox"]):focus {
@@ -101,6 +116,7 @@ header {
 
 .form-checkbox label {
     font-size: .9rem;
+    color: var(--dark-text);
 }
 
 .form-row:has(button) {
@@ -111,17 +127,19 @@ header {
     font-size: 1rem;
     padding: .5rem 2rem;
     background-color: transparent;
-    border: 1px solid;
+    color: var(--dark-text);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
 }
 
 .form-row button:hover {
-    background-color: red;
+    background-color: var(--border-color);
+    color: var(--main-bg-color);
     cursor: pointer;
 }
 
 .form-row button:active {
-    background-color: blue;
+    background-color: var(--light-text);
 }
 
 /* Library Grid */
@@ -136,7 +154,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid;
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     margin: 1rem 0;
     padding: .5rem;
@@ -151,22 +169,29 @@ header {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: .5rem;
+    color: var(--dark-text);
+}
+
+.book-card p {
+    color: var(--light-text);
 }
 
 .book-card button {
     font-size: 1rem;
     padding: .5rem 2rem;
     background-color: transparent;
-    border: 1px solid;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     width: 100%;
+    color: var(--dark-text);
 }
 
 .book-card button:hover {
-    background-color: red;
+    background-color: var(--border-color);
+    color: var(--main-bg-color);
     cursor: pointer;
 }
 
 .book-card button:active {
-    background-color: blue;
+    background-color: var(--light-text);
 }
