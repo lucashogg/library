@@ -6,10 +6,17 @@ body {
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     font-weight: normal;
     background-color: var(--main-bg-color);
+    color: var(--dark-text);
 }
 
 .display-none {
     display: none;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /**** HEADER ****/
@@ -172,6 +179,7 @@ header {
     border-radius: 10px;
     padding: .5rem;
     box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.15);
+    background-color: var(--main-bg-color);
 }
 
 .book-card-item {
@@ -208,4 +216,14 @@ header {
 
 .book-card button:active {
     background-color: var(--light-text);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+footer p {
+    text-align: center;
+    padding: 2rem 0;
 }
