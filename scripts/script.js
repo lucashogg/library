@@ -14,12 +14,13 @@ closeModalBtn.addEventListener('click', () => {
 // Check if form requirements met
 function formReq() {
     const formInputs = document.querySelectorAll('.add-book-form input');
+    const formError = document.querySelector('.form-error');
 
     for (let i = 0; i < formInputs.length; i++) {
         if (formInputs[i].type === 'checkbox') {
             continue;
         } else if (!formInputs[i].value) {
-            console.log('value req');
+            formError.classList.remove('display-none');
             return false;
         }
     }
