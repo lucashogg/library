@@ -2,19 +2,20 @@
 const addBookModal = document.querySelector('.add-book-modal');
 const openModalBtn = document.querySelector('.open-modal');
 const closeModalBtn = document.querySelector('.close-modal');
+const formError = document.querySelector('.form-error');
 
 openModalBtn.addEventListener('click', () => {
     addBookModal.showModal();
 });
 
 closeModalBtn.addEventListener('click', () => {
+    formError.classList.add('display-none');
     addBookModal.close();
 });
 
 // Check if form requirements met
 function formReq() {
     const formInputs = document.querySelectorAll('.add-book-form input');
-    const formError = document.querySelector('.form-error');
 
     for (let i = 0; i < formInputs.length; i++) {
         if (formInputs[i].type === 'checkbox') {
@@ -29,7 +30,7 @@ function formReq() {
 }
 
 // Array of books
-const myLibrary = [{title: 'The Hobbit', author: 'J.R.R. Tolkien', pages: 310, read: true }];
+const myLibrary = [];
 
 // General book constructor
 class Book {

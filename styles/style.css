@@ -15,6 +15,7 @@ body {
 /**** HEADER ****/
 header {
     border-bottom: 1px solid var(--border-color);
+    box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.05);
 }
 
 .header-items {
@@ -132,12 +133,12 @@ header {
     padding: .5rem 2rem;
     background-color: transparent;
     color: var(--dark-text);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--button-border-color);
     border-radius: 8px;
 }
 
 .form-row button:hover {
-    background-color: var(--border-color);
+    background-color: var(--button-border-color);
     color: var(--main-bg-color);
     cursor: pointer;
 }
@@ -170,6 +171,7 @@ header {
     border-radius: 10px;
     margin: 1rem 0;
     padding: .5rem;
+    box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.15);
 }
 
 .book-card-item {
@@ -192,14 +194,14 @@ header {
     font-size: 1rem;
     padding: .5rem 2rem;
     background-color: transparent;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--button-border-color);
     border-radius: 8px;
     width: 100%;
     color: var(--dark-text);
 }
 
 .book-card button:hover {
-    background-color: var(--border-color);
+    background-color: var(--button-border-color);
     color: var(--main-bg-color);
     cursor: pointer;
 }
