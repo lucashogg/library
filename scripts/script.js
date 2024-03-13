@@ -25,7 +25,6 @@ function formReq() {
             return false;
         }
     }
-    console.log('form successfully submitted');
     return true;
 }
 
